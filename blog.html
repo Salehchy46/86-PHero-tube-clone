@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Blog</title>
+</head>
+<body class="m-12">
+  <header>
+    <h1 class="text-center text-5xl font-extrabold">Blog</h1>
+  </header>
+  <main>
+    <h3 class="text-3xl font-bold mt-5">1. Discuss the scope of var, let, and const.</h3>
+    <p class="mt-5">The scope of a variable in JavaScript defines where it can be accessed or used within a program. The keywords var, let, and const define variables, but they behave differently in terms of scope, hoisting, and reassignment.</p>
+    <p class="mt-5">1. var Scope</p>
+      <p>Function Scope: Variables declared with var are scoped to the function they are declared in. If var is declared outside of any function, it becomes global.</p>
+      <p>No Block Scope: var does not recognize block scope (e.g., within an if or for block), meaning it "leaks" out of the block and remains accessible in the outer scope.</p>
+    <p class="mt-5">2. let Scope</p>
+      <p>Block Scope: let variables are scoped to the block in which they are defined. They cannot be accessed outside the block.</p>
+      <p>No Hoisting Before Initialization: Unlike var, let variables are not accessible before they are declared (temporal dead zone).</p>
+    <p class="mt-5">3. const Scope</p>
+      <p>Block Scope: Like let, const is block-scoped.</p>
+      <p>Constant Value: const is used to declare variables that cannot be reassigned (though their contents may still be mutable if they are objects or arrays).</p>
+      <p>No Hoisting Before Initialization: Similar to let, const variables are not accessible before declaration (temporal dead zone).</p>
+
+    <h3 class="text-3xl font-bold mt-5">2. Tell us the use cases of null and undefined</h3>
+    <p class="mt-5">1. A variable is undefined when it is declared but has not been assigned a value, or when a function does not explicitly return a value.</p>
+    <p class="mt-5">The undefined value can be</p>
+    <ul class="mt-5">
+      <li class="list-disc">Uninitialized Variables</li>
+      <li class="list-disc">Function Parameters Without Arguments</li>
+      <li class="list-disc">Functions Without a Return Statement</li>
+      <li class="list-disc">Accessing Non-Existent Object Properties</li>
+      <li class="list-disc">Array Elements with "Holes"</li>
+    </ul>
+  <p class="mt-5">2. Null is an intentional assignment to indicate the absence of any object or value.</p>
+  <h3 class="text-3xl font-bold mt-5">3. What do you mean by REST API?</h3>
+  <p class="mt-5">A REST API (Representational State Transfer Application Programming Interface) is a widely used architectural style for designing networked applications. It allows systems to communicate over the internet using a set of standard principles and protocols, primarily HTTP. REST APIs enable developers to build web services that are lightweight, scalable, and maintainable.</p>  
+
+  </main>
+</body>
+</html>
