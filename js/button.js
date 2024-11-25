@@ -23,7 +23,7 @@ const diplayButtons = (buttons) => {
     const buttonShed = document.createElement('div');
     buttonShed.classList = `text-center mt-5 mx-3`;
     buttonShed.innerHTML = `
-    <button onclick="${button.category_id}" class="btn btn-active hover:bg-slate-950 text-white">${button.category}</button>
+    <button onclick="musicVideos()" class="btn btn-active hover:bg-slate-950 text-white">${button.category}</button>
     `
     getButtons.appendChild(buttonShed);
   });
@@ -101,31 +101,27 @@ loadButtons();
 loadVideos();
 nothingToShow();
 
-const allVideos = (video, button) => {
-  document.getElementById(button.category_id = '1000').addEventListener('click', function(){
-    loadVideos(video);
-  })
-}
-
 allVideos();
 
-const musicVideos = (button, video) => {
-  document.getElementById(button.category_id = '1001').addEventListener('click', function(){
+const musicVideos = (videos, videoCard) => {
     try {
-      const res = fetch('https://openapi.programming-hero.com/api/videos/category/1001');
+      const res = fetch(`https://openapi.programming-hero.com/api/videos/category/${category_id}`);
       const data = res.json();
   
-      const video = data.data || [];
-      console.log(video);
-      if (!Array.isArray(video)) {
-        console.error("Videos can't be loaded", video);
+      const videos = data.data || [];
+      console.log(videos);
+      if (!Array.isArray(videos)) {
+        console.error("Videos can't be loaded", videos);
         return;
       }
     } catch (error) {
       console.error("Failed to load", error);
     }
-  })
-  return video;
+
+    videos.forEach(video =>{
+      videoCard;
+      return video
+    })
 };
 
 musicVideos();
